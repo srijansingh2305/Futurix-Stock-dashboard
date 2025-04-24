@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Card, CardContent } from "./ui/card";
 import {
   ResponsiveContainer,
@@ -15,13 +16,15 @@ import {
   ComposedChart
 } from "recharts";
 
+
+
 const ForecastSection = () => {
   const analystEstimatesData = [
     { name: "Strong Buy", value: 40, color: "#34D399" },
     { name: "Buy", value: 25, color: "#A7F3D0" },
     { name: "Hold", value: 15, color: "#E5E7EB" },
     { name: "Sell", value: 10, color: "#FCA5A5" },
-    { name: "Strong Sell", value: 10, color: "#F87171" }
+    { name: "Strong Sell", value: 10, color: "#F87171" },
   ];
 
   const recommendationTrendData = [
@@ -35,40 +38,57 @@ const ForecastSection = () => {
   return (
     
     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-      {/* Analyst Estimates */}
+
       <Card className="bg-[#1c1c22] p-4 rounded-2xl shadow-lg">
         <CardContent>
-          <div className="text-md font-semibold mb-2">Analyst Estimates</div>
-          <ResponsiveContainer width="100%" height={200}>
-            <PieChart>
-              <Pie
-                data={analystEstimatesData}
-                dataKey="value"
-                nameKey="name"
-                cx="50%"
-                cy="50%"
-                innerRadius={50}
-                outerRadius={80}
-                paddingAngle={2}
-              >
-                {analystEstimatesData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
-                ))}
-              </Pie>
-            </PieChart>
-          </ResponsiveContainer>
-          <div className="mt-4 space-y-1 text-sm">
-            {analystEstimatesData.map((item) => (
-              <div key={item.name} className="flex justify-between">
-                <span>{item.name}</span>
-                <span>{item.value}</span>
-              </div>
-            ))}
+          <div className="text-md font-semibold mb-4">Analyst Estimates</div>
+
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            
+
+            <div className="w-full md:w-1/2">
+              <ResponsiveContainer width="100%" height={200}>
+                <PieChart>
+                  <Pie
+                    data={analystEstimatesData}
+                    dataKey="value"
+                    nameKey="name"
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={50}
+                    outerRadius={80}
+                    paddingAngle={2}
+                  >
+                    {analystEstimatesData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))}
+                  </Pie>
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+
+          
+
+            <div className="w-full md:w-1/2 space-y-2 text-sm">
+              {analystEstimatesData.map((item) => (
+                <div key={item.name} className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="w-3 h-3 rounded-full inline-block"
+                      style={{ backgroundColor: item.color }}
+                    />
+                    <span>{item.name}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
           </div>
         </CardContent>
       </Card>
 
-      {/* Recommendation Trend */}
+
       <Card className="bg-[#1c1c22] p-4 rounded-2xl shadow-lg">
         <CardContent>
           <div className="text-md font-semibold mb-2">Recommendation Trend</div>
@@ -87,7 +107,7 @@ const ForecastSection = () => {
         </CardContent>
       </Card>
 
-      {/* Share Price Forecast */}
+
       <Card className="bg-[#1c1c22] p-4 rounded-2xl shadow-lg">
         <CardContent>
           <div className="text-md font-semibold mb-2">Share Price Forecast</div>
@@ -109,7 +129,7 @@ const ForecastSection = () => {
         </CardContent>
       </Card>
 
-      {/* Financials Forecast */}
+
       <Card className="bg-[#1c1c22] p-4 rounded-2xl shadow-lg">
         <CardContent>
           <div className="text-md font-semibold mb-2">Financials Forecast</div>
@@ -130,7 +150,7 @@ const ForecastSection = () => {
         </CardContent>
       </Card>
 
-      {/* Hits & Misses */}
+
       <Card className="bg-[#1c1c22] p-4 rounded-2xl shadow-lg">
         <CardContent>
           <div className="text-md font-semibold mb-2">Hits & Misses</div>
@@ -164,7 +184,6 @@ const ForecastSection = () => {
         </CardContent>
       </Card>
 
-      {/* Technical Analysis Placeholder */}
       <Card className="bg-[#1c1c22] p-4 rounded-2xl shadow-lg col-span-full">
         <CardContent>
           <div className="text-md font-semibold mb-2">Technical Analysis</div>
@@ -175,11 +194,26 @@ const ForecastSection = () => {
               { time: "12:00", open: 53, close: 56 },
               { time: "13:00", open: 56, close: 55 },
               { time: "14:00", open: 55, close: 58 },
+              { time: "10:00", open: 52, close: 54 },
+              { time: "11:00", open: 54, close: 53 },
+              { time: "12:00", open: 53, close: 56 },
+              { time: "13:00", open: 56, close: 55 },
+              { time: "14:00", open: 55, close: 58 },
+              { time: "10:00", open: 52, close: 54 },
+              { time: "11:00", open: 54, close: 53 },
+              { time: "12:00", open: 53, close: 56 },
+              { time: "13:00", open: 56, close: 55 },
+              { time: "14:00", open: 55, close: 58 },
+              { time: "10:00", open: 52, close: 54 },
+              { time: "11:00", open: 54, close: 53 },
+              { time: "12:00", open: 53, close: 56 },
+              { time: "13:00", open: 56, close: 55 },
+              { time: "14:00", open: 55, close: 58 },
             ]}>
               <XAxis dataKey="time" stroke="#999" />
               <YAxis stroke="#999" />
               <Tooltip contentStyle={{ backgroundColor: "#1c1c22", border: "none" }} />
-              <Bar dataKey="close" fill="#34D399" />
+              <Bar dataKey= "close" fill="#34D399" />
             </ComposedChart>
           </ResponsiveContainer>
         </CardContent>

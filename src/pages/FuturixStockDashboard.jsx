@@ -8,35 +8,25 @@ import VolumeTrendsSection from "../components/VolumeTrendsSection";
 import CorporateActionsSection from "../components/CorporateActionsSection";
 import AboutCompanySection from "../components/AboutCompanySection";
 import PeersComparisonSection from "../components/PeersComparisonSection";
+import CompanyFAQ from "../components/CompanyFAQ";
+import MarketOverviewSection from "../components/MarkeytOverviewSection";
+
 
 export default function FuturixStockDashboard() {
   return (
     <div className="p-6 bg-[#0e0e12] text-white min-h-screen font-sans space-y-8">
       <div className="text-2xl font-bold">Apple Inc. (AAPL)</div>
 
-      {/* Top Stock Overview */}
       <TopSection />
-
-      {/* News Section */}
       <NewsSection />
-
-      {/* Financials Section */}
       <FinancialsSection />
-
-      {/* Forecast Section */}
       <ForecastSection />
-
-      {/* Volume Trends */}
-      <VolumeTrendsSection />
-
-      {/* Corporate Actions */}
+      <MarketOverviewSection />
       <CorporateActionsSection />
-
-      {/* About This Company */}
       <AboutCompanySection />
-
-      {/* Peers Comparison */}
       <PeersComparisonSection />
+      <VolumeTrendsSection />
+      <CompanyFAQ />
     </div>
   );
 }

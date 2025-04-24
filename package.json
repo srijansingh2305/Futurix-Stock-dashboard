@@ -16,6 +16,8 @@
     "lucide-react": "^0.503.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-financial-charts": "^2.0.1",
+    "react-lightweight-charts": "^0.1.0",
     "recharts": "^2.15.3"
   },
   "devDependencies": {

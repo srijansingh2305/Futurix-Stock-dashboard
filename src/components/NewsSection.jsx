@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "./ui/card";
-import { Newspaper } from "lucide-react"; // Icon (optional)
+import { Newspaper } from "lucide-react"; 
 
 const newsItems = [
   {
